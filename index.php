@@ -70,7 +70,7 @@
 
         function setBirthDate($dataNascita) {
             
-            if ($this -> validateDate($dataNascita, Persona::$dateFormat)) {
+            if (self::validateDate($dataNascita, self::$dateFormat)) {
                 $this -> dataNascita = $dataNascita;
             }
             
