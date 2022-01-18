@@ -28,14 +28,14 @@
      class Persona {
          private $nome, $cognome, $dataNascita;
 
-         static $dateFormat = 'd/m/Y';
+         protected static $dateFormat = 'd/m/Y';
 
          function __construct($nome, $cognome) {
             $this -> setName($nome);
             $this -> setSurname($cognome);
          }
 
-         static function validateDate($date, $format) {
+         protected static function validateDate($date, $format) {
             $d = DateTime::createFromFormat($format, $date);
             return $d && $d->format($format) == $date;
         }
